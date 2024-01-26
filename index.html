@@ -8,7 +8,7 @@
     <title>Main</title>
 </head>
 <body>
-    <div id="container">
+    <div id="container" >
         <header>
             <nav>
                 <aside id="left-header">
@@ -16,20 +16,31 @@
                 </aside>
                 <aside id="right-header">
                     <ul id="menu">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Menu</li>
-                        <li>Service</li>
-                        <li>Contact</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </aside>
             </nav>
         </header>
         <section id="content">
             <div id="home"> <!--End home-->
-                <aside id="left-home"></aside>
-                <aside id="right-home"></aside>
+                <aside id="left-home">
+                    <h1 class="text-color-orange">Full Website</h1>
+                    <p>Foods the<br/>
+                    Most precious thing
+                    </p>
+                    <div class="holder-button">
+                        <button>Today's Menu</button>
+                    </div>
+                </aside>
+                <aside id="right-home">
+                    <img src="images/home.png" alt="Hamburguer with fries and soda" class="circle-line">
+                </aside>
             </div>
+            <hr class="red-line">
         </section>
         <footer></footer>
     </div>

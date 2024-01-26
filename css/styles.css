@@ -11,9 +11,29 @@ body{
     background-color: #1e1d2b;
 }
 
+#container{
+    /*width 100vw*/
+    /*height 4vh + */
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 4em;
+}
+
+img{
+    width: 50%;
+}
+
+/*------------------header------------*/
 header{
+    /* position:fixed; */
+    top:0;
+    right:0;
     width: 100vw;
     height: 4vh;
+    /* z-index: 1000; */
     display: flex;
     flex-direction: row;
 }
@@ -27,6 +47,8 @@ ul{
     float:left;
 }
 
+
+
 #right-header{
     width: 50vw;
     float:right;
@@ -39,6 +61,42 @@ ul{
     justify-content: space-evenly;
 }
 
+/*-----------------content---------*/
+#home{
+    height:55vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#left-home{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#right-home{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+#left-home p{
+    font-size: 2.5em;
+}
+
+.holder-button{
+    width: 390px; /*width of the h1 to make it aling*/
+}
+
+button{
+    margin-top: 1vh;
+    font-size: 1em;
+    width: 130px;
+    background-color: #ff702a;
+}
+
 
 /* utils */
 
@@ -47,7 +105,7 @@ ul{
 }
 
 .red-border{
-    border:2em #f85151 solid;
+    border:0.4em #f85151 solid;
 }
 
 .red-line{
@@ -70,12 +128,24 @@ ul{
 }
 
 .circle-line{/*make the border like a circle and like if you where drawing*/
-    border:1em #12b886 solid;
-    
+    border:1em #12b886 ;/*solid in the future*/
 }
 
 .line-transition{/*make the transition*/
     border-bottom:1em #ff702a solid;
 }
 
+
+/*--------------- media -------------*/
+
+@media (max-width:800px){
+    /*-----------------content---------*/
+#home{
+    height:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
 /*#2c2b47 menu cellphone color*/
