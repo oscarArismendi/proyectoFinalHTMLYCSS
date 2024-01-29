@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+*{  z-index: 0;
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -28,14 +28,19 @@ img{
 
 /*------------------header------------*/
 header{
-    /* position:fixed; */
+    position:fixed;
     top:0;
     right:0;
-    width: 100vw;
+    width: 100%;
     height: 4vh;
-    /* z-index: 1000; */
+    z-index: 100;
     display: flex;
     flex-direction: row;
+    background-color: #1e1d2b;
+}
+
+nav{
+    width: 100%;
 }
 
 ul{
@@ -43,18 +48,18 @@ ul{
 }
 
 #left-header{
-    width: 50vw;
+    width: 49%;
     float:left;
 }
 
 
 
 #right-header{
-    width: 50vw;
+    width: 49%;
     float:right;
 }
 
-#menu{
+#bar-menu{
     width:50vw;
     display: flex;
     flex-direction: row;
@@ -62,32 +67,56 @@ ul{
 }
 
 /*-----------------content---------*/
-#home{
+#home,#about{
     height:55vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#left-home{
-    width: 50vw;
+#menu,#services,#advertising{
+    height:55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-#right-home{
+#left-home,#about-left{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+}
+
+#right-home,#about-right{
     width: 50vw;
     display: flex;
     justify-content: center;
+}
+
+#about-right{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
 }
 
 #left-home p{
     font-size: 2.5em;
 }
 
-.holder-button{
-    width: 390px; /*width of the h1 to make it aling*/
+#shopping-menu,#services-menu{
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#services-menu il{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
 }
 
 button{
@@ -95,6 +124,11 @@ button{
     font-size: 1em;
     width: 130px;
     background-color: #ff702a;
+}
+
+#ad{
+    width: 80vw;
+    height:40vh;
 }
 
 
@@ -117,6 +151,10 @@ button{
 
 .box-pale{/*Make the border like you where drawing*/
     background-color: #ffefe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .text-color-orange{
