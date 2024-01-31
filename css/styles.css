@@ -26,6 +26,16 @@ img{
     width: 50%;
 }
 
+a {
+    text-decoration: none;
+}
+
+input[type="checkbox"]{
+    visibility: hidden;
+}
+
+
+
 /*------------------header------------*/
 header{
     position:fixed;
@@ -66,6 +76,10 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+#mobile-bar-menu,#menu-icon,#label-menu-icon{
+    display:none;
 }
 
 /*-----------------content---------*/
@@ -217,9 +231,17 @@ button{
 
 @media (max-width:800px){
 
+    #left-home h1{
+        font-size: 5em;
+    }
+
+    img{
+        width: 70%;
+    }
+
     header{
-        height: 8vh;
         display: flex;
+        flex-direction: column;
     }
     .menu-icon{
         display: flex;
@@ -229,31 +251,130 @@ button{
         align-items: center;
     }
 
+
     #right-header{
         width: 49%;
         height: 100%;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
 
     #bar-menu{
         display: none;
     }
+    
+    #menu-icon,#label-menu-icon{
+        display:block;
+    }
+    
 
-    .menu-icon:hover + #bar-menu {
-        display: block;
-        background-color: red;
+    nav:has(#right-header input[type="checkbox"]:checked) +#mobile-bar-menu{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2c2b47 ;
+            
     }
     /* ul.dropdown-content{
         display: block;
     } */
 
     #home{
-        height:100vw;
+        height:100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
+
+    #left-home{
+        width: 100vw;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+
+
+    #left-home p {
+        font-size: 3.5em;
+        text-align: center;
+        
+    }
+
+    #about{
+        height:100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #about-right{
+        width: 100%;
+        align-items: center;
+    }
+
+    #about-right p{
+        width: 90vw;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #about-right button{
+        width: 200px;
+        font-size: 1.5em;
+    }
+
+    #menu{
+        text-align: center;
+        height: 100vh;
+    }
+
+    #shopping-menu{
+        height: 120vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: none;
+    }
+    #shopping-menu il{
+        width: 30vw;
+    }
+    #shopping-menu img{
+        width: 50%;
+    }
+
+    #services{
+        height: 120vh;
+        justify-content: flex-start;
+    }
+
+    #services h1{
+        text-align: center;
+    }
+
+    #services-menu il{
+        width: 70%;
+    }
+
+    #services-menu il img{
+        width: 30%;
+    }
+
+    #services-menu il p{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #services-menu{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #ad h1{
+        font-size: 3em;
+    }
 }
-/*#2c2b47 menu cellphone color*/
