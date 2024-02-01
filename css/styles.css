@@ -197,6 +197,16 @@ button{
 .menu-icon{
     display: none;
 }
+@media only screen and (min-width: 800px) {
+    
+    ul li a:hover{
+        border-bottom: #ff702a 2px solid;
+        color: #ff702a;
+    
+    }
+}
+
+
 
 /*--------------- media -------------*/
 
@@ -428,6 +438,150 @@ button{
     }
 
     #about-right h1{
+        font-size: 3em;
+    }
+
+    #ad h1{
+        font-size: 2.1em;
+    }
+
+    #home p{
+        font-size: 3em;
+    }
+
+    #home h1{
+        font-size: 4.5em;
+    }
+
+    #services h1{
         font-size: 3.5em;
     }
+}
+@media (max-width:500px){
+    #home h1 {
+        font-size: 2.5em;
+    }
+    
+    #home p {
+        font-size: 1.8em;
+    }
+
+    img{
+        width: 130%;
+    }
+
+    #about-right h1 {
+        font-size: 1.9em;
+    }
+
+    #about-right p{
+        font-size: 1.1em;
+    }
+
+    #about-left{
+        width: 50%;
+        align-items: center;
+    }
+
+    #menu h1 {
+        font-size: 2.4em;
+    }
+
+    #services h1 {
+        font-size: 2.2em;
+    }
+    
+    #services-menu il p {
+        font-size: 1.3em;
+    }
+    
+    #ad h1 {
+        font-size: 1.4em;
+    }
+
+    #contact{
+        width: 60vw;
+    }
+
+    #contact-us ul {
+        width: 60vw;
+    }
+    
+}
+@media (max-width:320px){
+    #home h1{
+        font-size: 2em;
+    }
+
+    #home p{
+        font-size: 1.3em;
+    }
+
+    img{
+        width: 180%;
+    }
+
+    #about-right{
+        height: 40%;
+    }
+
+    #about-right h1{
+        font-size: 1.3em;
+    }
+
+    #about-right p{
+        font-size: 0.8em;
+    }
+
+    #about-right button{
+        width: 100px;
+        font-size:0.8em;
+    }
+    
+    #about-left{
+        align-items: center;
+    }
+
+    #menu h1{
+        font-size: 1.5em;
+    }
+
+    #shopping-menu il{
+        width: 50vw;
+    }
+
+    #services h1{
+        font-size: 1.5em;
+    }
+
+    #services-menu il p {
+        font-size: 0.9em;
+    }
+
+    #services-menu {
+        height: 90%;
+    }
+
+    #mobile-bar-menu li a h1{
+        font-size: 3em;
+    }
+
+    #ad{
+        height: 95vw;
+        width: 95vw;
+    }
+
+    #ad h1{
+        font-size: 1em;
+    }
+
+    #contact{
+        width: 60vw;
+    }
+
+    #contact-us ul {
+        width: 60vw;
+    }
+
+
 }
