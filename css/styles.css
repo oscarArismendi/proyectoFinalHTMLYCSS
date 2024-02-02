@@ -197,6 +197,16 @@ button{
 .menu-icon{
     display: none;
 }
+@media only screen and (min-width: 800px) {
+    
+    ul li a:hover{
+        border-bottom: #ff702a 2px solid;
+        color: #ff702a;
+    
+    }
+}
+
+
 
 /*--------------- media -------------*/
 
@@ -382,52 +392,5 @@ button{
 
     #ad h1{
         font-size: 3em;
-    }
-
-    #contact{
-        height: 80vh;
-        width: 30vw;
-        padding-left: 10vw;
-        flex-direction: column;
-    }
-
-    #contact-us{
-        width: 90vw;
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #contact-us ul{
-        width: 30vw;
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
-@media (max-width:720px){
-    #menu h1{
-        font-size: 3.4em;
-    }
-    #ad h1{
-        font-size: 2.6em;
-    }
-
-    #about-right h1{
-        font-size: 3.8em;
-    }
-}
-
-@media (max-width:594px){
-    
-    #about-right{
-        height: 60%;
-        justify-content: space-between;
-    }
-
-    #about-right h1{
-        font-size: 3.5em;
     }
 }
