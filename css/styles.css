@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -40,7 +41,6 @@ header{
     top:0;
     right:0;
     width: 100%;
-    height: 4vh;
     z-index: 100;
     display: flex;
     flex-direction: row;
@@ -51,13 +51,15 @@ nav{
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
+    padding: 0 0.2rem;
 }
 
 ul{
     list-style: none;
 }
 
-#left-header{
+/* #left-header{
     width: 49%;
     float:left;
 }
@@ -67,7 +69,7 @@ ul{
 #right-header{
     width: 49%;
     float:right;
-}
+} */
 
 #bar-menu{
     width:50vw;
@@ -81,15 +83,20 @@ ul{
 }
 
 /*-----------------content---------*/
+#content{
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 #home,#about{
-    height:55vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 #menu,#services,#advertising{
-    height:55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,7 +128,6 @@ ul{
 
 #shopping-menu,#services-menu,#contact{
     width: 100vw;
-    height: 25vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -200,6 +206,7 @@ button{
     ul li a:hover{
         border-bottom: #ff702a 2px solid;
         color: #ff702a;
+        transition: 0.5s;
     
     }
 }
@@ -261,8 +268,6 @@ button{
 
 
     #right-header{
-        width: 49%;
-        height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -285,12 +290,8 @@ button{
             background-color: #2c2b47 ;
             
     }
-    /* ul.dropdown-content{
-        display: block;
-    } */
 
     #home{
-        height:100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -312,7 +313,6 @@ button{
     }
 
     #about{
-        height:100vh;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-evenly;
@@ -341,14 +341,15 @@ button{
 
     #menu{
         text-align: center;
-        height: 100vh;
+        gap: 1rem;
     }
 
     #shopping-menu{
-        height: 120vh;
+        height: auto;
         flex-direction: column;
         align-items: center;
         justify-content: none;
+        gap: 1rem;
     }
     #shopping-menu li{
         width: 30vw;
@@ -358,7 +359,6 @@ button{
     }
 
     #services{
-        height: 124vh;
         justify-content: flex-start;
     }
 
@@ -393,7 +393,6 @@ button{
     }
 
     #contact{
-        height: 80vh;
         width: 30vw;
         padding-left: 10vw;
         flex-direction: column;
@@ -556,17 +555,8 @@ button{
         font-size: 0.9em;
     }
 
-    #services-menu {
-        height: 90%;
-    }
-
     #mobile-bar-menu li a h1{
         font-size: 3em;
-    }
-
-    #ad{
-        height: 95vw;
-        width: 95vw;
     }
 
     #ad h1{
@@ -580,6 +570,4 @@ button{
     #contact-us ul {
         width: 60vw;
     }
-
-
 }
