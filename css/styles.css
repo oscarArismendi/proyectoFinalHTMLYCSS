@@ -12,17 +12,16 @@ body{
     background-color: #1e1d2b;
 }
 
-#container{
-    display: flex;
-    flex-direction: column;
-}
-
 h1{
-    font-size: 4em;
+    font-size: clamp(2.4rem, 1.117rem + 2.563vw, 4rem);
 }
 
 img{
     width: 50%;
+}
+
+#right-home img, #about-left img{
+    min-width: clamp(12.5rem, -7.545rem + 40.04vw, 37.5rem);
 }
 
 a {
@@ -123,13 +122,21 @@ ul{
 }
 
 #left-home p{
-    font-size: 2.5em;
+    font-size: clamp(2rem, 1.599rem + 0.801vw, 2.5rem);
 }
 
-#shopping-menu,#services-menu,#contact{
-    width: 100vw;
+#services-menu{
+    display: flex;
+    /* gap: clamp(1.25rem, -7.77rem + 18.018vw, 12.5rem); */
+    justify-content: space-evenly;
+    min-width: 90%;
+
+}
+
+#contact,#shopping-menu{
     display: flex;
     justify-content: space-evenly;
+    min-width: 90%;
 }
 
 #services-menu li{
@@ -180,6 +187,11 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    max-width: 30%;
+}
+
+#advertising .box-pale{
+    max-width: 90%;
 }
 
 .text-color-orange{
@@ -211,47 +223,12 @@ button{
     }
 }
 
-
-
 /*--------------- media -------------*/
-
-@media (max-width:1275px) and (min-width:1113px) {
-    h1{
-        font-size: 3.5em;
-    }
-}
-
-@media (max-width:1113px) and (min-width:958px) {
-    h1{
-        font-size: 3em;
-    }
-    #left-home p{
-        font-size: 2.4em;
-    }
-}
-
-@media (max-width:958px) and (min-width:801px) {
-    h1{
-        font-size: 2.4em;
-    }
-    #left-home p{
-        font-size: 2em;
-    }
-
-    #shopping-menu li{
-        width: 24vw;
-    }
-}
-
 
 @media (max-width:800px){
 
     #left-home h1{
         font-size: 5em;
-    }
-
-    img{
-        width: 70%;
     }
 
     header{
@@ -296,6 +273,11 @@ button{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        gap: 3rem;
+    }
+
+    #home h1{
+        font-size:clamp(1.8rem, 0.733rem + 8.533vw, 5rem);
     }
 
     #left-home{
@@ -307,7 +289,7 @@ button{
 
 
     #left-home p {
-        font-size: 3.5em;
+        font-size: clamp(1rem, 0.167rem + 6.667vw, 3.5rem);
         text-align: center;
         
     }
@@ -317,8 +299,20 @@ button{
         flex-direction: column-reverse;
         justify-content: space-evenly;
         align-items: center;
+        gap: 3rem;
     }
     
+    #about-left, #right-home{
+        padding-left: 0;
+        min-width: 90%;
+        width: auto;
+    }
+
+    #about-left img, #right-home img{
+        margin: auto;
+        width: 70%;
+    }
+
     #about-right{
         width: 100%;
         align-items: center;
@@ -326,12 +320,13 @@ button{
 
     #about-right h1{
         text-align: center;
+        font-size: clamp(1.1rem, 0.133rem + 7.733vw, 4rem);
     }
 
     #about-right p{
         width: 90vw;
         text-align: center;
-        font-size: 1.5em;
+        font-size: clamp(0.8rem, 0.567rem + 1.867vw, 1.5rem);
     }
 
     #about-right button{
@@ -344,16 +339,22 @@ button{
         gap: 1rem;
     }
 
+    #menu h1{
+        font-size: clamp(1.5rem, 0.55rem + 7.6vw, 3.4rem);
+    }
+
+    .box-pale{
+        max-width: 90%;
+    }
+
     #shopping-menu{
-        height: auto;
         flex-direction: column;
         align-items: center;
         justify-content: none;
         gap: 1rem;
+        
     }
-    #shopping-menu li{
-        width: 30vw;
-    }
+
     #shopping-menu img{
         width: 50%;
     }
@@ -364,6 +365,7 @@ button{
 
     #services h1{
         text-align: center;
+        font-size: clamp(1.5rem, 0.667rem + 6.667vw, 4rem);
     }
 
     #services-menu li{
@@ -377,7 +379,7 @@ button{
     }
 
     #services-menu li p{
-        font-size: 1.5em;
+        font-size: clamp(0.9rem, 0.7rem + 1.6vw, 1.5rem);
         text-align: center;
     }
 
@@ -389,18 +391,16 @@ button{
     }
 
     #ad h1{
-        font-size: 3em;
+        font-size: clamp(0.9rem, 0.2rem + 5.6vw, 3rem);
     }
 
     #contact{
-        width: 30vw;
         padding-left: 10vw;
         flex-direction: column;
+        margin: 6vh 0;
     }
 
     #contact-us{
-        width: 90vw;
-        height: 10vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -408,166 +408,21 @@ button{
     }
 
     #contact-us ul{
-        width: 30vw;
+        min-width: 40vw;
         display: flex;
         justify-content: space-evenly;
     }
 }
 
-@media (max-width:720px){
-    #menu h1{
-        font-size: 3.4em;
-    }
-    #ad h1{
-        font-size: 2.6em;
-    }
-
-    #about-right h1{
-        font-size: 3.8em;
-    }
-}
-
-@media (max-width:594px){
-    
-    #about-right{
-        height: 60%;
-        justify-content: space-between;
-    }
-
-    #about-right h1{
-        font-size: 3em;
-    }
-
-    #ad h1{
-        font-size: 2.1em;
-    }
-
-    #home p{
-        font-size: 3em;
-    }
-
-    #home h1{
-        font-size: 4.5em;
-    }
-
-    #services h1{
-        font-size: 3.5em;
-    }
-}
-@media (max-width:500px){
-    #home h1 {
-        font-size: 2.5em;
-    }
-    
-    #home p {
-        font-size: 1.8em;
-    }
-
-    img{
-        width: 130%;
-    }
-
-    #about-right h1 {
-        font-size: 1.9em;
-    }
-
-    #about-right p{
-        font-size: 1.1em;
-    }
-
-    #about-left{
-        width: 50%;
-        align-items: center;
-    }
-
-    #menu h1 {
-        font-size: 2.4em;
-    }
-
-    #services h1 {
-        font-size: 2.2em;
-    }
-    
-    #services-menu li p {
-        font-size: 1.3em;
-    }
-    
-    #ad h1 {
-        font-size: 1.4em;
-    }
-
-    #contact{
-        width: 60vw;
-    }
-
-    #contact-us ul {
-        width: 60vw;
-    }
-    
-}
 @media (max-width:320px){
-    #home h1{
-        font-size: 2em;
-    }
-
-    #home p{
-        font-size: 1.3em;
-    }
-
-    img{
-        width: 180%;
-    }
-
-    #about-right{
-        height: 40%;
-    }
-
-    #about-right h1{
-        font-size: 1.3em;
-    }
-
-    #about-right p{
-        font-size: 0.8em;
-    }
 
     #about-right button{
         width: 100px;
         font-size:0.8em;
-    }
-    
-    #about-left{
-        align-items: center;
-    }
-
-    #menu h1{
-        font-size: 1.5em;
-    }
-
-    #shopping-menu li{
-        width: 50vw;
-    }
-
-    #services h1{
-        font-size: 1.5em;
-    }
-
-    #services-menu li p {
-        font-size: 0.9em;
     }
 
     #mobile-bar-menu li a h1{
         font-size: 3em;
     }
 
-    #ad h1{
-        font-size: 1em;
-    }
-
-    #contact{
-        width: 60vw;
-    }
-
-    #contact-us ul {
-        width: 60vw;
-    }
 }
